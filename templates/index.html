@@ -1,0 +1,31 @@
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	Hello world, this is my first website for IoT project
+</head>
+
+
+<body>
+<!-- 	<br>
+	<img src="/var/www/iotled/images/robot.jpg">
+	<br> -->
+	LED control buttons
+	<br>
+	<button id="ledon">On</button>
+	<button id="ledoff">Off</button>
+
+	<script>
+		$('#ledoff').on('click', function() {
+			$.get("/ledoff");
+			console.log('ledoff script initiated');
+		});
+
+		$('#ledon').on('click', function() {
+			$.get("/ledon");
+			console.log('ledon script initiated');
+		});
+	</script>
+
+</body>
+</html>
+
